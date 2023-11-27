@@ -69,3 +69,8 @@ typings/
 
 # db
 /mongo
+
+# local files
+/images/product/*.jpeg
+/images/product/*.jpg
+/images/product/*.png
