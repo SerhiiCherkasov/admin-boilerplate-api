@@ -167,7 +167,7 @@ export class ProductController {
     @param.path.string('id') id: string
   ): Promise<void> {
     const product = await this.productRepository.findById(id);
-    if (product.previewImage) {
+    if (product?.previewImage) {
       this.deleteProductPreviewImage(product);
     }
     await this.productRepository.deleteById(id);
