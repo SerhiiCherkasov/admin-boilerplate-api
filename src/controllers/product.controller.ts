@@ -163,9 +163,7 @@ export class ProductController {
   @response(204, {
     description: 'Product DELETE success',
   })
-  async deleteById(
-    @param.path.string('id') id: string
-  ): Promise<void> {
+  async deleteById(@param.path.string('id') id: string): Promise<void> {
     const product = await this.productRepository.findById(id);
     if (product?.previewImage) {
       this.deleteProductPreviewImage(product);
